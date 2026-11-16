@@ -1,0 +1,102 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Exit-9B/MCM-Helper/main/docs/config.schema.json",
+  "modName": "WhoWasThisFromAgain",
+  "displayName": "Who Was This From Again",
+  "content": [
+    {
+      "text": "Which letters get their own name",
+      "type": "header"
+    },
+    {
+      "id": "bInheritance:Groups",
+      "text": "Letters of Inheritance",
+      "type": "toggle",
+      "help": "Name the Letter of Inheritance after the hold it comes from and the friend who died.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "id": "bBounties:Groups",
+      "text": "Bounties",
+      "type": "toggle",
+      "help": "Name bounty notices from jarls, stewards and innkeepers (and the ones bounty hunters carry) after the hold and the place.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "id": "bContracts:Groups",
+      "text": "Contracts",
+      "type": "toggle",
+      "help": "Name the contracts hired thugs carry after the person who sent them and the target.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "id": "bNotes:Groups",
+      "text": "Notes and requests",
+      "type": "toggle",
+      "help": "Name the Letter from a Friend, Courier's Letter, Treasure Hunter's Note, Request, Calcelmo's letter and Urag's note.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "id": "bDawnguard:Groups",
+      "text": "Dawnguard letters",
+      "type": "toggle",
+      "help": "Name the Dawnguard orders, vampire letters, incriminating letters and assassin's writs.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "text": "How the name reads",
+      "type": "header"
+    },
+    {
+      "id": "bShowSender:Display",
+      "text": "Show who it is from",
+      "type": "toggle",
+      "help": "Put the hold or the person who sent the letter in its name.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "id": "bShowSubject:Display",
+      "text": "Show the person or place it is about",
+      "type": "toggle",
+      "help": "Put the person or place the letter is about in its name.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "id": "iStyle:Display",
+      "text": "Name style",
+      "type": "enum",
+      "help": "Kind first: Bounty from Whiterun: Halted Stream Camp. Subject first: Halted Stream Camp - Bounty (Whiterun). Short: Bounty: Halted Stream Camp.",
+      "valueOptions": {
+        "options": ["Kind first", "Subject first", "Short"],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "bKeepText:Display",
+      "text": "Keep each letter's text",
+      "type": "toggle",
+      "help": "Save what each letter says when you pick it up, so it never turns into [...] after its quest ends.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    },
+    {
+      "text": "Letters you already carry",
+      "type": "header"
+    },
+    {
+      "text": "Rename letters I have",
+      "type": "text",
+      "help": "Give every letter this mod has named the name the settings above ask for.",
+      "valueOptions": { "value": "Rename" },
+      "action": {
+        "type": "CallFunction",
+        "function": "RenameLetters"
+      }
+    },
+    {
+      "id": "bReapplyOnLoad:Display",
+      "text": "Rename them every time a save loads",
+      "type": "toggle",
+      "help": "Do the same as the button above each time you load a save.",
+      "valueOptions": { "sourceType": "ModSettingBool" }
+    }
+  ]
+}

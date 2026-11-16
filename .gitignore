@@ -1,0 +1,15 @@
+# Test environments, builds and logs stay out of git.
+test-env/
+dist/
+build/
+build-test/
+.xmake/
+.venv/
+*.log
+__pycache__/
+deps/
+tests/dll/build/
+tests/plugin/build/
+dll/lib/commonlibsse-ng/
+__pycache__/
+/screenshots/
